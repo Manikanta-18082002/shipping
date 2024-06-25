@@ -1,11 +1,7 @@
-
 #Build
-
 FROM maven as build 
-
 WORKDIR /opt/shipping
-
-COPY pom.xml /opt/shipping/ /opt/shipping/
+COPY pom.xml /opt/shipping/
 # Above is development environment
 RUN mvn dependency:resolve
 COPY src /opt/shipping/src/
